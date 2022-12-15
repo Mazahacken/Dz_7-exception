@@ -30,9 +30,13 @@ int main()
     {
         std::cout << "Error";
     }
-    catch (std::exception&)
+    catch (std::exception& ex)
     {
-        std::cout << "index big";
+        std::cout << "index big" << ex.what();
+    }
+     catch (...)
+    {
+        std::cout << "throw" << endl;
     }
     return 0;
 }
