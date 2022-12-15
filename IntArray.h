@@ -13,7 +13,6 @@ public:
     {
         if (length <= 0) throw IntArray();
         {
-            std::cerr << "length < 0" << std::endl;
         }
         if (length > 0)
             m_data = new int[length] {};

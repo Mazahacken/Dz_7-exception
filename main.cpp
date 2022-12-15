@@ -32,7 +32,7 @@ int main()
     }
     catch (std::exception& ex)
     {
-        std::cout << "index big" << ex.what();
+        std::cout << ex.what();
     }
      catch (...)
     {
