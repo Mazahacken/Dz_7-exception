@@ -23,8 +23,8 @@ int main()
     std::cout << '\n';
     try
     {
-        IntArray array(10);
-        array.insertBefore(20, 15);
+        IntArray array(-10);
+        array.insertBefore(20, 115);
     }
     catch (IntArray&)
     {

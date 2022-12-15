@@ -2,7 +2,6 @@
 
 class IntArray
 {
-private:
     int m_length{};
     int* m_data{};
 
@@ -12,9 +11,9 @@ public:
     IntArray(int length) :
         m_length{ length }
     {
-        if (length <= 0) throw IntArray
+        if (length <= 0) throw IntArray();
         {
-            std::cerr << "length < 0" << endl;
+            std::cerr << "length < 0" << std::endl;
         }
         if (length > 0)
             m_data = new int[length] {};
@@ -33,12 +32,12 @@ public:
         m_length = 0;
     }
 
-    
+
 
     int& operator[](int index)
     {
-        if (index > m_length) throw std::bad_range("error")
-        {  
+        if (index > m_length) throw std::out_of_range("error");
+        {
         }
         return m_data[index];
     }
@@ -136,6 +135,3 @@ public:
 
     int getLength() const { return m_length; }
 };
-
-
-#endif
