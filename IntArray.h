@@ -1,7 +1,4 @@
 #pragma once
-#ifndef INTARRAY_H
-#define INTARRAY_H
-
 
 class IntArray
 {
@@ -15,9 +12,9 @@ public:
     IntArray(int length) :
         m_length{ length }
     {
-        if (length <= 0)
+        if (length <= 0) throw IntArray
         {
-            throw IntArray();
+            std::cerr << "length < 0" << endl;
         }
         if (length > 0)
             m_data = new int[length] {};
@@ -40,9 +37,8 @@ public:
 
     int& operator[](int index)
     {
-        if (index > m_length)
-        {
-            throw IntArray();
+        if (index > m_length) throw std::bad_range("error")
+        {  
         }
         return m_data[index];
     }
